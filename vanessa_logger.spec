@@ -21,6 +21,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	sed
+Provides:	%{name}-%{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
@@ -98,6 +99,10 @@ gzip -9nf README ChangeLog NEWS TODO
 %clean
 rm -rf $RPM_BUILD_DIR/%{name}-%{version}
 rm -rf $RPM_BUILD_ROOT
+
+%post -p /sbin/ldconfig
+
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
