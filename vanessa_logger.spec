@@ -2,7 +2,7 @@ Summary:	Generic logging layer
 Summary(pl):	Podstawowa warstwa loguj±ca
 Name:		vanessa_logger
 Version:	0.0.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Group(cs):	Knihovny
