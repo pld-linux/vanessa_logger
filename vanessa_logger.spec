@@ -26,20 +26,26 @@ URL:		http://vanessa.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	sed
 Provides:	%{name}-%{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Generic logging layer that may be used to log to one or more of
 syslog, an open file handle or a file name. Though due to to
 limitations in the implementation of syslog opening multiple syslog
-loggers doesn't makes sense. Includes the ability to limit which
+loggers doesn't make sense. Includes the ability to limit which
 messages will be logged based on priorities.
+
+%description -l pl
+Wspólna warstwa loguj±ca, która mo¿e byæ u¿yta do logowania do jednego
+lub wiêcej spo¶ród: sysloga, uchwytu otwartego pliku lub nazwy pliku;
+ale z powodu ograniczenia implementacji sysloga otwieranie wielu
+loggerów nie ma sensu. Zawiera tak¿e mo¿liwo¶æ limitowania, które
+komunikaty bêd± logowane, na podstawie priorytetów.
 
 %package devel
 Summary:	Headers and static libraries for development
+Summary(pl):	Pliki nag³ówkowe i biblioteki statyczne
 Group:		Development/Libraries
 Group(cs):	Vývojové prostøedky/Knihovny
 Group(da):	Udvikling/Biblioteker
@@ -63,8 +69,13 @@ Requires:	%{name}-%{version}
 Headers and static libraries required to develop against
 vanessa_logger.
 
+%description devel -l pl
+Pliki nag³owkowe i biblioteki statyczne potrzebne do tworzenia
+programów u¿ywaj±cych vanessa_logger.
+
 %package sample
-Summary:	Example programme that demonstrates vanessa_logger.
+Summary:	Example programme that demonstrates vanessa_logger
+Summary(pl):	Przyk³adowy program demonstracyjny do vanessa_logger
 Group:		Development/Libraries
 Group(cs):	Vývojové prostøedky/Knihovny
 Group(da):	Udvikling/Biblioteker
@@ -88,6 +99,9 @@ Requires:	%{name}-devel-%{version}
 Sample programme with source that demonstrates various features of
 vanessa_logger.
 
+%description sample -l pl
+Przyk³adowy program (ze ¼ród³ami), który demonstruje ró¿ne mo¿liwo¶ci
+vanessa_logger.
 
 %prep
 %setup -q
@@ -102,25 +116,22 @@ aclocal
 autoconf
 automake -a -c
 %configure
-CFLAGS="${RPM_OPT_FLAGS}"
+CFLAGS="%{rpmcflags}"
 %{__make}
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d ${RPM_BUILD_ROOT}/{etc,%{_prefix}/{lib,bin,doc}}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_prefix}/{lib,bin,doc}}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 gzip -9nf README ChangeLog NEWS TODO
 
 %clean
-rm -rf $RPM_BUILD_DIR/%{name}-%{version}
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
