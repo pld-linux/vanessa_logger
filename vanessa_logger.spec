@@ -1,11 +1,11 @@
 Summary:	Generic logging layer
 Summary(pl):	Podstawowa warstwa loguj±ca
 Name:		vanessa_logger
-Version:	0.0.2
-Release:	3
+Version:	0.0.3
+Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://vergenet.net/pub/vanessa_logger/vanessa_logger/%{name}-%{version}.tar.gz
+Source0:	ftp://vergenet.net/pub/vanessa/vanessa_logger/0.0.3/%{name}-%{version}.tar.gz
 URL:		http://vanessa.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -87,8 +87,6 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_prefix}/{lib,bin,doc}}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf README ChangeLog NEWS TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -101,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog NEWS TODO
 %attr(755,root,root) %{_libdir}/*.la
 %attr(755,root,root) %{_libdir}/*.so
 %attr(644,root,root) %{_includedir}/*.h
