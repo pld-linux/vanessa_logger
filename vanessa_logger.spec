@@ -28,7 +28,7 @@ komunikaty bêd± logowane, na podstawie priorytetów.
 Summary:	Headers for vanessa_logger development
 Summary(pl):	Pliki nag³ówkowe vanessa_logger
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Headers required to develop against vanessa_logger.
@@ -41,7 +41,7 @@ vanessa_logger.
 Summary:	Static libraries for vanessa_logger development
 Summary(pl):	Biblioteki statyczne vanessa_logger
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libraries to develop against vanessa_logger.
@@ -53,7 +53,7 @@ Biblioteki statyczne vanessa_logger.
 Summary:	Example programme that demonstrates vanessa_logger
 Summary(pl):	Przyk³adowy program demonstracyjny do vanessa_logger
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description sample
 Sample programme with source that demonstrates various features of
