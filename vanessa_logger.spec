@@ -26,7 +26,6 @@ URL:		http://vanessa.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-Provides:	%{name}-%{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,8 +43,8 @@ loggerów nie ma sensu. Zawiera tak¿e mo¿liwo¶æ limitowania, które
 komunikaty bêd± logowane, na podstawie priorytetów.
 
 %package devel
-Summary:	Headers and static libraries for development
-Summary(pl):	Pliki nag³ówkowe i biblioteki statyczne
+Summary:	Headers for vanessa_logger development
+Summary(pl):	Pliki nag³ówkowe vanessa_logger
 Group:		Development/Libraries
 Group(cs):	Vıvojové prostøedky/Knihovny
 Group(da):	Udvikling/Biblioteker
@@ -63,15 +62,42 @@ Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(sl):	Razvoj/Knji¾nice
 Group(sv):	Utveckling/Bibliotek
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
-Requires:	%{name}-%{version}
+Requires:	%{name} = %{version}
 
 %description devel
-Headers and static libraries required to develop against
-vanessa_logger.
+Headers required to develop against vanessa_logger.
 
 %description devel -l pl
-Pliki nag³owkowe i biblioteki statyczne potrzebne do tworzenia
-programów u¿ywaj±cych vanessa_logger.
+Pliki nag³ówkowe potrzebne do tworzenia programów u¿ywaj±cych
+vanessa_logger.
+
+%package static
+Summary:	Static libraries for vanessa_logger development
+Summary(pl):	Biblioteki statyczne vanessa_logger
+Group:		Development/Libraries
+Group(cs):	Vıvojové prostøedky/Knihovny
+Group(da):	Udvikling/Biblioteker
+Group(de):	Entwicklung/Bibliotheken
+Group(es):	Desarrollo/Bibliotecas
+Group(fr):	Development/Librairies
+Group(is):	Şróunartól/Ağgerğasöfn
+Group(it):	Sviluppo/Librerie
+Group(ja):	³«È¯/¥é¥¤¥Ö¥é¥ê
+Group(no):	Utvikling/Bibliotek
+Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
+Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
+Group(sl):	Razvoj/Knji¾nice
+Group(sv):	Utveckling/Bibliotek
+Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
+Requires:	%{name}-devel = %{version}
+
+%description static
+Static libraries to develop against vanessa_logger.
+
+%description static -l pl
+Biblioteki statyczne vanessa_logger.
 
 %package sample
 Summary:	Example programme that demonstrates vanessa_logger
@@ -139,11 +165,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.*a
-%attr(755,root,root) %{_libdir}/*.so
-%attr(755,root,root) %{_libdir}/*.so.0
-%attr(644,root,root) %{_includedir}/*.h
 %doc *.gz
+%attr(755,root,root) %{_libdir}/*.la
+%attr(755,root,root) %{_libdir}/*.so
+%attr(644,root,root) %{_includedir}/*.h
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/*.a
 
 %files sample
 %defattr(644,root,root,755)
