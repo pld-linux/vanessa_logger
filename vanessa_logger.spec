@@ -2,7 +2,7 @@ Summary:	Generic logging layer
 Summary(pl):	Podstawowa warstwa loguj±ca
 Name:		vanessa_logger
 Version:	0.0.2
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://vergenet.net/pub/vanessa_logger/vanessa_logger/%{name}-%{version}.tar.gz
@@ -55,7 +55,7 @@ Biblioteki statyczne vanessa_logger.
 Summary:	Example programme that demonstrates vanessa_logger
 Summary(pl):	Przyk³adowy program demonstracyjny do vanessa_logger
 Group:		Development/Libraries
-Requires:	%{name}-devel-%{version}
+Requires:	%{name}-devel = %{version}
 
 %description sample
 Sample programme with source that demonstrates various features of
