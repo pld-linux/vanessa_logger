@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	ftp://vergenet.net/pub/vanessa/vanessa_logger/0.0.3/%{name}-%{version}.tar.gz
+# Source0-md5:	70ebe8d00bda9eedcd6b5a5c1ccc5d63
 URL:		http://vanessa.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
