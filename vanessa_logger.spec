@@ -6,7 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.vergenet.net/linux/vanessa/download/%{name}/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	ce286935eb3c3a1a500721d6ab812496
+# Source0-md5:	562d3eeeedcbbb017a500d91e95cef00
 URL:		http://www.vergenet.net/linux/vanessa/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
