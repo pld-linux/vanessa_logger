@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://www.vergenet.net/linux/vanessa/download/%{name}/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	562d3eeeedcbbb017a500d91e95cef00
 URL:		http://www.vergenet.net/linux/vanessa/
+BuildRequires:	gcc-c++
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
