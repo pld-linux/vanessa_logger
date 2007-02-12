@@ -1,5 +1,5 @@
 Summary:	Generic logging layer
-Summary(pl.UTF-8):   Podstawowa warstwa logująca
+Summary(pl.UTF-8):	Podstawowa warstwa logująca
 Name:		vanessa_logger
 Version:	0.0.7
 Release:	1
@@ -27,7 +27,7 @@ komunikaty będą logowane, na podstawie priorytetów.
 
 %package devel
 Summary:	Headers for vanessa_logger development
-Summary(pl.UTF-8):   Pliki nagłówkowe vanessa_logger
+Summary(pl.UTF-8):	Pliki nagłówkowe vanessa_logger
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -40,7 +40,7 @@ vanessa_logger.
 
 %package static
 Summary:	Static libraries for vanessa_logger development
-Summary(pl.UTF-8):   Biblioteki statyczne vanessa_logger
+Summary(pl.UTF-8):	Biblioteki statyczne vanessa_logger
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -52,7 +52,7 @@ Biblioteki statyczne vanessa_logger.
 
 %package sample
 Summary:	Example programme that demonstrates vanessa_logger
-Summary(pl.UTF-8):   Przykładowy program demonstracyjny do vanessa_logger
+Summary(pl.UTF-8):	Przykładowy program demonstracyjny do vanessa_logger
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
