@@ -1,5 +1,5 @@
 Summary:	Generic logging layer
-Summary(pl):	Podstawowa warstwa loguj±ca
+Summary(pl.UTF-8):   Podstawowa warstwa logujƒÖca
 Name:		vanessa_logger
 Version:	0.0.7
 Release:	1
@@ -18,41 +18,41 @@ limitations in the implementation of syslog opening multiple syslog
 loggers doesn't make sense. Includes the ability to limit which
 messages will be logged based on priorities.
 
-%description -l pl
-WspÛlna warstwa loguj±ca, ktÛra moøe byÊ uøyta do logowania do jednego
-lub wiÍcej spo∂rÛd: sysloga, uchwytu otwartego pliku lub nazwy pliku;
+%description -l pl.UTF-8
+Wsp√≥lna warstwa logujƒÖca, kt√≥ra mo≈ºe byƒá u≈ºyta do logowania do jednego
+lub wiƒôcej spo≈õr√≥d: sysloga, uchwytu otwartego pliku lub nazwy pliku;
 ale z powodu ograniczenia implementacji sysloga otwieranie wielu
-loggerÛw nie ma sensu. Zawiera takøe moøliwo∂Ê limitowania, ktÛre
-komunikaty bÍd± logowane, na podstawie priorytetÛw.
+logger√≥w nie ma sensu. Zawiera tak≈ºe mo≈ºliwo≈õƒá limitowania, kt√≥re
+komunikaty bƒôdƒÖ logowane, na podstawie priorytet√≥w.
 
 %package devel
 Summary:	Headers for vanessa_logger development
-Summary(pl):	Pliki nag≥Ûwkowe vanessa_logger
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe vanessa_logger
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Headers required to develop against vanessa_logger.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe potrzebne do tworzenia programÛw uøywaj±cych
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe potrzebne do tworzenia program√≥w u≈ºywajƒÖcych
 vanessa_logger.
 
 %package static
 Summary:	Static libraries for vanessa_logger development
-Summary(pl):	Biblioteki statyczne vanessa_logger
+Summary(pl.UTF-8):   Biblioteki statyczne vanessa_logger
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libraries to develop against vanessa_logger.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne vanessa_logger.
 
 %package sample
 Summary:	Example programme that demonstrates vanessa_logger
-Summary(pl):	Przyk≥adowy program demonstracyjny do vanessa_logger
+Summary(pl.UTF-8):   Przyk≈Çadowy program demonstracyjny do vanessa_logger
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -60,8 +60,8 @@ Requires:	%{name}-devel = %{version}-%{release}
 Sample programme with source that demonstrates various features of
 vanessa_logger.
 
-%description sample -l pl
-Przyk≥adowy program (ze ºrÛd≥ami), ktÛry demonstruje rÛøne moøliwo∂ci
+%description sample -l pl.UTF-8
+Przyk≈Çadowy program (ze ≈∫r√≥d≈Çami), kt√≥ry demonstruje r√≥≈ºne mo≈ºliwo≈õci
 vanessa_logger.
 
 %prep
