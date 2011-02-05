@@ -1,12 +1,12 @@
 Summary:	Generic logging layer
 Summary(pl.UTF-8):	Podstawowa warstwa logująca
 Name:		vanessa_logger
-Version:	0.0.8
+Version:	0.0.10
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.vergenet.net/linux/vanessa/download/%{name}/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	12c17d44bd27141c175d69c7b5d0f4dc
+# Source0-md5:	e19a13c5b30556fbae2d8402cab7fa46
 URL:		http://www.vergenet.net/linux/vanessa/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -94,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
+%{_pkgconfigdir}/vanessa-logger.pc
 %{_includedir}/*.h
 
 %files static
