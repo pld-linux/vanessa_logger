@@ -2,7 +2,7 @@ Summary:	Generic logging layer
 Summary(pl.UTF-8):	Podstawowa warstwa logująca
 Name:		vanessa_logger
 Version:	0.0.10
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.vergenet.net/linux/vanessa/download/%{name}/%{version}/%{name}-%{version}.tar.gz
